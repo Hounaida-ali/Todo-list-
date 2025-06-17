@@ -14,3 +14,6 @@ body{
     margin-left: 20%;
     text-align: left;
 }
+.checked{
+    text-decoration:line-through;
+}
