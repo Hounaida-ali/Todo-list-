@@ -22,7 +22,7 @@ const editBtn = li.querySelector(".editBtn")
 // console.log (checkbox);
 checkbox.addEventListener("click", () =>{
 span1.classList.toggle("checked");
-console.log(span1.classList);
+counter ();
 });
 editBtn.addEventListener("click", function (){
     const taskupdate = prompt("editer tache: ", span1.textContent)
@@ -31,5 +31,14 @@ editBtn.addEventListener("click", function (){
         checkbox.checked = false
         span1.classList.remove("checked");
     }
+    counter ();
 })
 };
+
+const counter= () =>{
+    const completedtasks = document.querySelectorAll(".checked").length
+    const compteur =  document.getElementById("CompletedCounter");
+   compteur.innerText = completedtasks;
+}
+
+    counter ();
